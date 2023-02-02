@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serì;
+}
+
+.container-content {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+html,
+body,
+.slidewrapper,
+.ndslide,
+.ndslide ul,
+.ndslide ul li {
+    width: 100%;
+    height: 100%;
+
+}
+
+:root {
+    --violet: #2980b9;
+    --pink: #FC427B;
+    --gradient: linear-gradient(90deg, var(--violet), var(--pink));
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* menu */
+.menu {
+    width: 100%;
+    height: 50px;
+    padding-left: 10%;
+    float: left;
+    background-color: #2980b9;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.menu .phantu {
+    width: 8%;
+    height: 50px;
+    margin-left: 10px;
+    float: left;
+}
+
+.menu .phantu .phantren {
+    width: 120px;
+    height: 35px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+.content {
+    width: 100%;
+    height: 500px;
+    transform: translateX(60px);
+    display: flex;
+    flex-wrap: wrap;
+    /*xuống hàng */
+    padding-top: 600px;
+
+}
+
+.phantu .phantren1 {
+    background-color: #2980b9;
+    width: 120px;
+    height: 30px;
+    color: #ecf0f1;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    font-size: 13px;
+    padding-top: 15px;
+
+}
+
+.menu .phantu .phanduoi {
+    width: 200px;
+    visibility: hidden;
+    padding-top: 15px;
+
+}
+
+.phantu:hover .phanduoi {
+    visibility: visible;
+}
+
+.phantu .phanduoi li {
+    background-color: #d2dae2;
+    list-style: none;
+    /* border-bottom: 1px solid #b2bec3; */
+    padding-left: 30px;
+    padding-top: 15px;
+
+
+}
+
+.phantu .phanduoi a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+
+}
+
+.phantu .phanduoi a:hover {
+    border-bottom: 1px solid #d2dae2;
+    color: #2980b9;
+
+}
+
+.menu .phantu .phanduoi a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid #2980b9;
+}
+#menu .ti-shopping-cart{
+    
+    
+} 
+
+/* slide */
+.slidewrapper {
+    position: relative;
+}
+
+.ndslide ul li {
+    opacity: 0;
+}
+
+.ndslide ul li.active .slide .noidung h2,
+.ndslide ul li.active .slide .noidung small,
+.ndslide ul li.active .slide .noidung p,
+.ndslide ul li.active .slide .noidung .nut {
+    opacity: 0;
+    animation: hiennd 3s forwards;
+}
+
+@keyframes hiennd {
+    from {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ndslide ul li.active .slide .noidung h2 {
+    animation-delay: 0.8s
+}
+
+.ndslide ul li.active .slide .noidung small {
+    animation-delay: 1s
+}
+
+.ndslide ul li.active .slide .noidung p {
+    animation-delay: 1.2s
+}
+
+.ndslide ul li.active .slide .noidung .nut {
+    animation-delay: 1.4s
+}
+
+.ndslide ul li.active {
+    opacity: 1;
+}
+
+.ndslide .slide,
+.slide .bg {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide .tgtren {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    opacity: 0;
+}
+
+.ndslide ul li.active .slide .tgtren {
+    animation: hientgtren 2s forwards;
+}
+
+@keyframes hientgtren {
+    from {
+        transform: translateX(100%) translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) translateY(0);
+        opacity: 0.3;
+    }
+}
+
+.slide .tgduoi1 {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 60%;
+    opacity: 0.4;
+}
+
+.ndslide ul li.active .slide .tgduoi1 {
+    animation: hientgduoi1 2s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes hientgduoi1 {
+    from {
+        transform: translateX(-100%) translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) translateY(0);
+        opacity: 0.2;
+    }
+}
+
+.slide .tgduoi2 {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    width: 60%;
+    opacity: 0.6;
+}
+
+.ndslide ul li.active .slide .tgduoi2 {
+    animation: hientgduoi2 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes hientgduoi2 {
+    from {
+        transform: translateX(-100%) translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) translateY(0);
+        opacity: 0.6;
+    }
+}
+
+.slide .noidung {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    color: wheat;
+    width: 20%;
+    z-index: 5;
+}
+
+.slide small {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+    text-decoration: underline;
+}
+
+.slide h2 {
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.noidung .nut {
+    border: 1px solid white;
+    width: 55%;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.ndslide ul {
+    position: relative;
+}
+
+.ndslide ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nutchuyen {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nutchuyen ul li {
+    display: inline-block;
+    /* cho các hình tròn nằm ngang*/
+    list-style: none;
+    /*bỏ dấu chấm*/
+    width: 20px;
+    height: 20px;
+    border: 3px solid wheat;
+    border-radius: 50%;
+    /*cho nó trở thành hình tròn*/
+    margin: 5px;
+    cursor: pointer;
+}
+
+.nutchuyen ul li:hover,
+.nutchuyen ul li.active {
+    background-color: cadetblue;
+}
+
+/* phan oder đồng hồ */
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin: 20px;
+    margin-left: 50px;
+    margin-top: 50px;
+
+
+
+}
+
+.container .thumb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+}
+
+.container .thumb li {
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+
+}
+
+.container .thumb li img {
+    width: 90%;
+    transform: 0.5s;
+}
+
+.container .thumb li:hover img {
+    transform: rotate(-5deg);
+
+}
+
+.container .imgBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #ff0;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    padding: 0px 10px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container .imgBox h2 {
+    color: #2980b9;
+    letter-spacing: 1;
+}
+
+.container .imgBox img {
+    width: 90%;
+    transition: 0.25s;
+}
+
+.container .imgBox img:hover {
+    transform: scale(1.5) rotate(-15deg) translateX(20px);
+}
+
+.container .imgBox .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .imgBox .size span {
+    color: #2980b9;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-right: 5px;
+}
+
+.container .imgBox .size li {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: #d2dae2;
+    color: #2980b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: 0.25s;
+}
+
+.container .imgBox .size li:hover {
+    transform: translateY(-10px);
+}
+
+.container .imgBox .btn {
+    position: absolute;
+    bottom: -60px;
+    background: #2980b9;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    color: floralwhite;
+    transform: 0.25s;
+}
+
+.container .imgBox .btn:hover {
+    letter-spacing: 2px;
+}
+
+/* thông tin */
+.thongtin {
+    margin-top: 1990px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: #d2dae2;
+
+}
+
+.thongtin .box-container .box {
+    flex: 1 1 20rem;
+}
+
+.thongtin .box-container .box h3 {
+    font-size: 1.5rem;
+    color: var(--violet);
+    display: block;
+    text-decoration: none;
+    padding: .7rem 0;
+    padding-left: 3px;
+    /* border-bottom: 4px solid floralwhite; */
+
+}
+
+.thongtin .box-container .box p {
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    padding-left: 3px;
+}
+
+.thongtin .box-container .box a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    padding-left: 3px;
+    border-bottom: 2px solid floralwhite;
+}
+
+.thongtin .box-container .box a:hover {
+    color: var(--violet);
+}
+
+.thongtin .box-container .box p i {
+    padding-right: .5rem;
+    color: var(--violet);
+}
+
+.thongtin .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.thongtin img {
+    width: 80px;
+    height: 80px;
+}
